@@ -1,1 +1,1 @@
-DOMAIN-KEYWORD,bitzh
+DOMAIN-SUFFIX,zhbit.com
