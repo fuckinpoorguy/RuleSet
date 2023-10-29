@@ -1,2 +1,0 @@
-DOMAIN-SUFFIX,zhbit.com
-DOMAIN-SUFFIX,suzhi.zhbit.com
