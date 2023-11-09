@@ -1,1 +1,1 @@
-cloudflare.com
+DOMAIN-SUFFIX,cloudflare.com
