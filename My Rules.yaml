@@ -20,7 +20,7 @@ proxy-providers:
   
   直连节点:
     <<: *p
-    url: "https://apiurl.v1.mk/sub?target=clash&url=hysteria2%3A%2F%2Fc6fc9d33%40107.175.93.187%3A35436%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23%E5%B0%8F%E4%BF%9D%E7%BD%97&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=true&fdn=false&new_name=true"
+    url: "https://apiurl.v1.mk/sub?target=clash&url=hysteria2%3A%2F%2Faf88adbf%40107.175.93.186%3A55393%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23ColoCrossing%E6%B0%B4%E7%89%9B%E5%9F%8E%7Chysteria2%3A%2F%2Fc6fc9d33%40107.175.93.187%3A35436%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23%E5%B0%8F%E4%BF%9D%E7%BD%97&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
     
 ipv6: true
 allow-lan: true
@@ -94,6 +94,7 @@ proxy-groups:
   - {name: Twitter, <<: *pr}
   - {name: Pixiv, <<: *pr}
   - {name: ehentai, type: select , include-all-providers: true}
+  - {name: exhentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
   - {name: 哔哩东南亚, <<: *pr}
   - {name: 巴哈姆特, <<: *pr}
@@ -102,12 +103,14 @@ proxy-groups:
   - {name: Spotify, <<: *pr}
   - {name: Github, <<: *pr}
   - {name: PikPak, <<: *pr}
-  - {name: PikPakDownload, <<: *pr}
-  - {name: CloudflareTunnel, <<: *pr}
+  - {name: PikPakDownload, <<: *prd}
+  - {name: MusciTunnel, <<: *pr}
+  - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
+  - {name: Cloudflare, <<: *pr}
   - {name: Iwara, type: select , include-all-providers: true}
-  - {name: nhentai, type: select , include-all-providers: true}
-  - {name: oldfish, <<: *prd}
+  - {name: kemonoparty, type: select , include-all-providers: true}
+  - {name: parsec, <<: *pr}
   - {name: 国内, <<: *prd}
   - {name: 其他, <<: *pr}
 
@@ -122,8 +125,8 @@ proxy-groups:
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
  # - {name: 低倍率专线, type: fallback , include-all-providers: true, filter: "(?i)(日用 专线)"}
  # - {name: 低倍率专线负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(日用 专线)"}
-  - {name: 直连节点, type: select , include-all-providers: true, filter: "(?i)(小保罗)"}
-  - {name: 直连节点负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(小保罗)"}
+  - {name: 直连节点, type: select , include-all-providers: true, filter: "(?i)(小保罗|水牛城)"}
+  - {name: 直连节点负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(小保罗|水牛城)"}
   - name: "低倍率专线"
     type: fallback
     use:
@@ -158,15 +161,12 @@ rules:
   - RULE-SET,netflix_ip,NETFLIX
   - RULE-SET,telegram_ip,Telegram
   - RULE-SET,twitter_ip,Twitter
+  - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,PikPakDownload_classical,PikPakDownload
-  - RULE-SET,CloudflareTunnel_classical,CloudflareTunnel
+  - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
-  - RULE-SET,Iwara_classical,Iwara
-  - RULE-SET,MyDirect_classical,DIRECT
-  - RULE-SET,MyReject_classical,REJECT
-  - RULE-SET,nhentai_classical,nhentai
-  - RULE-SET,oldfish_classical,oldfish
+  - RULE-SET,iwara_classical,iwara
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 
@@ -243,6 +243,9 @@ rule-providers:
   Cloudflare_classical:
     <<: *classical
     url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/Cloudflare.yaml"
+  CloudflareWarp_classical:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/CloudflareWarp.yaml"
   MusicTunnel_classical:
     <<: *classical
     url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/MusicTunnel.yaml"
