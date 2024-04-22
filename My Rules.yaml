@@ -170,6 +170,7 @@ rules:
   - RULE-SET,exhentai_classical,exhentai
   - RULE-SET,kemonoparty_classical,kemonoparty
   - RULE-SET,parsec_classical,parsec
+  - RULE-SET,Plex_classical,Plex
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 
