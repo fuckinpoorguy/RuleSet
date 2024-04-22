@@ -142,7 +142,7 @@ proxy-groups:
     - ytoo
     filter: "(?i)(日用 专线)"
 
-   - name: "EDtunnel负载均衡"
+  - name: "EDtunnel负载均衡"
     type: load-balance
     strategy: round-robin
     use:
