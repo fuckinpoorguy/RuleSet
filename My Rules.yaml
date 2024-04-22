@@ -226,7 +226,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"
   PikPakDownload_classical:
     <<: *domain
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPakDownload.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPakDownload.yaml"
 
   cn_ip:
     <<: *ip
