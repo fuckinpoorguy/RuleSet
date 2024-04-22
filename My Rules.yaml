@@ -240,27 +240,31 @@ rule-providers:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml"
   
+  Cloudflare_classical:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/Cloudflare.yaml"
+  MusicTunnel_classical:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/MusicTunnel.yaml"
   PikPak_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/PikPak.yaml"
-  CloudflareTunnel_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPak.yaml"
+  PikPakDownload_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/CloudflareTunnel.yaml"
-  CloudflareWarp_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPakDownload.yaml"
+  Plex_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/CloudflareWarp.yaml"
-  Iwara_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/Plex.yaml"
+  exhentai_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/Iwara.yaml"
-  MyDirect_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/exhentai.yaml"
+  iwara_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/MyDirect.yaml"
-  MyReject_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/iwara.yaml"
+  kemonoparty_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/MyReject.yaml"
-  nhentai_classical:
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/kemonoparty.yaml"
+  parsec_classical:
     <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/nhentai.yaml"
-  oldfish_classical:
-    <<: *classical
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/oldfish.yaml"
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/parsec.yaml"
+    
