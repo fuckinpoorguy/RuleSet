@@ -94,7 +94,6 @@ proxy-groups:
   - {name: Twitter, <<: *pr}
   - {name: Pixiv, <<: *pr}
   - {name: ehentai, type: select , include-all-providers: true}
-  - {name: exhentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
   - {name: 哔哩东南亚, <<: *pr}
   - {name: 巴哈姆特, <<: *pr}
@@ -167,7 +166,6 @@ rules:
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,iwara_classical,iwara
-  - RULE-SET,exhentai_classical,exhentai
   - RULE-SET,kemonoparty_classical,kemonoparty
   - RULE-SET,parsec_classical,parsec
   - RULE-SET,Plex_classical,Plex
@@ -262,9 +260,6 @@ rule-providers:
   Plex_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Plex.yaml"
-  exhentai_classical:
-    <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/exhentai.yaml"
   iwara_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/iwara.yaml"
