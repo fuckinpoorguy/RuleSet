@@ -246,32 +246,32 @@ rule-providers:
   
   Cloudflare_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/Cloudflare.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Cloudflare.yaml"
   CloudflareWarp_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/CloudflareWarp.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/CloudflareWarp.yaml"
   MusicTunnel_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/MusicTunnel.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/MusicTunnel.yaml"
   PikPak_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPak.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPak.yaml"
   PikPakDownload_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPakDownload.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPakDownload.yaml"
   Plex_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/Plex.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Plex.yaml"
   exhentai_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/exhentai.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/exhentai.yaml"
   iwara_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/iwara.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/iwara.yaml"
   kemonoparty_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/kemonoparty.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/kemonoparty.yaml"
   parsec_classical:
     <<: *classical
-    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/parsec.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/parsec.yaml"
     
