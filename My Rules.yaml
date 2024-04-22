@@ -222,7 +222,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"
   PikPakDownload_classical:
     <<: *domain
-    url: "https://github.com/lonefisher/RuleSet/raw/Provider/RuleSet/PikPakDownload.yaml"
+    url: "https://raw.githubusercontent.com/fuckinpoorguy/RuleSet/main/PikPakDownload.yaml"
 
   cn_ip:
     <<: *ip
