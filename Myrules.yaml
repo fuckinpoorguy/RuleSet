@@ -108,7 +108,6 @@ proxy-groups:
   - {name: CloudflareWarp, <<: *prd}
   - {name: Cloudflare, <<: *pr}
   - {name: iwara, type: select , include-all-providers: true}
-  - {name: kemonoparty, type: select , include-all-providers: true}
   - {name: parsec, <<: *pr}
   - {name: 国内, <<: *prd}
   - {name: 其他, <<: *pr}
@@ -166,7 +165,6 @@ rules:
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,iwara_classical,iwara
-  - RULE-SET,kemonoparty_classical,kemonoparty
   - RULE-SET,parsec_classical,parsec
   - RULE-SET,Plex_classical,Plex
   - RULE-SET,cn_ip,国内
@@ -263,9 +261,6 @@ rule-providers:
   iwara_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/iwara.yaml"
-  kemonoparty_classical:
-    <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/kemonoparty.yaml"
   parsec_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/parsec.yaml"
