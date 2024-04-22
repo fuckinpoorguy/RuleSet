@@ -252,9 +252,6 @@ rule-providers:
   PikPak_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPak.yaml"
-  PikPakDownload_classical:
-    <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPakDownload.yaml"
   Plex_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Plex.yaml"
