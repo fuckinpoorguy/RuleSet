@@ -161,7 +161,7 @@ rules:
   - RULE-SET,twitter_ip,Twitter
   - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,PikPak_classical,PikPak
-  - RULE-SET,PikPakDownload_classical,PikPakDownload
+  - RULE-SET,PikPakDownload_domain,PikPakDownload
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,iwara_classical,iwara
