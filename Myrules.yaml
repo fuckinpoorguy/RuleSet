@@ -162,6 +162,8 @@ rules:
   - RULE-SET,bahamut_domain,巴哈姆特
   - RULE-SET,spotify_domain,Spotify
   - RULE-SET,pixiv_domain,Pixiv
+  - RULE-SET,MusicTunnel_classical,MusicTunnel
+  - RULE-SET,iwara_classical,iwara
   - RULE-SET,cn_domain,国内
   - RULE-SET,geolocation-!cn,其他
 
@@ -169,12 +171,10 @@ rules:
   - RULE-SET,netflix_ip,NETFLIX
   - RULE-SET,telegram_ip,Telegram
   - RULE-SET,twitter_ip,Twitter
-  - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,PikPakDownload_domain,PikPakDownload
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
-  - RULE-SET,iwara_classical,iwara
   - RULE-SET,parsec_classical,parsec
   - RULE-SET,Plex_classical,Plex
   - RULE-SET,cn_ip,国内
