@@ -104,7 +104,7 @@ proxy-groups:
   - {name: Github, <<: *pr}
   - {name: PikPak, <<: *pr}
   - {name: PikPakDownload, <<: *prd}
-  - {name: MusciTunnel, <<: *pr}
+  - {name: MuscicTunnel, <<: *pr}
   - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
   - {name: Cloudflare, <<: *pr}
