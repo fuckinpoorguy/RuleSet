@@ -108,7 +108,7 @@ proxy-groups:
   - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
   - {name: Cloudflare, <<: *pr}
-  - {name: Iwara, type: select , include-all-providers: true}
+  - {name: iwara, type: select , include-all-providers: true}
   - {name: kemonoparty, type: select , include-all-providers: true}
   - {name: parsec, <<: *pr}
   - {name: 国内, <<: *prd}
