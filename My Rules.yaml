@@ -167,6 +167,7 @@ rules:
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,iwara_classical,iwara
+  - RULE-SET,exhentai_classical,exhentai
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 
