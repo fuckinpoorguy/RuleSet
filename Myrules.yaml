@@ -151,8 +151,8 @@ proxy-groups:
 rules:
   - GEOIP,lan,直连,no-resolve
 
-  - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,PikPakDownload_domain,PikPakDownload
+  - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,parsec_classical,parsec
