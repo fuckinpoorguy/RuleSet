@@ -105,7 +105,7 @@ proxy-groups:
   - {name: jsdelivr, <<: *pr}
   - {name: PikPak, <<: *pr}
   - {name: PikPakDownload, <<: *prd}
-  - {name: UtraMobile, <<: *pr}
+  - {name: UtraMobile, type: select , include-all-providers: true}
   - {name: MusicTunnel, <<: *pr}
   - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
