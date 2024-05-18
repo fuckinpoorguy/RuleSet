@@ -151,6 +151,7 @@ rules:
 
   - RULE-SET,PikPakDownload_domain,PikPakDownload
   - RULE-SET,PikPak_classical,PikPak
+  - RULE-SET,UtraMobile
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,parsec_classical,parsec
@@ -275,4 +276,6 @@ rule-providers:
   parsec_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/parsec.yaml"
-    
+  UtraMobile_classical:
+    <<: *classical
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/UtraMobile.yaml"   
