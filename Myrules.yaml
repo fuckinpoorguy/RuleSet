@@ -12,19 +12,20 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   ytoo:
     <<: *p
-    url: "https://api.stentvessel.top/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=true&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D59802%26token%3DYuov0quWLKPE%26sip002%3D1"     
-
-  低倍率专线:
-    <<: *p
-    url: "https://api.stentvessel.top/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=true&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D59802%26token%3DYuov0quWLKPE%26sip002%3D1"
+    url: "https://api.stentvessel.top/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=true&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D62943%26token%3Dp2VdT6V1BGpn%26sip002%3D1"     
   
   直连节点:
     <<: *p
     url: "https://apiurl.v1.mk/sub?target=clash&url=hysteria2%3A%2F%2Fc6fc9d33%40107.175.93.187%3A35436%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23%E5%B0%8F%E4%BF%9D%E7%BD%97&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
 
+  花云:
+    <<: *p
+    url: "https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Fsid%3D117578%26token%3DnjV0wNcJ3GTG%26sip002%3D1"
+
   EDtunnel:
     <<: *p
-    url: "https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fnet.oldfish.site%2Fsub%2F9b569bcd-d0c5-4e06-acaa-ee8ac52cebb0%3Fformat%3Dclash&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"  
+    url: "https://url.v1.mk/sub?target=clash&url=vless%3A%2F%2Fb230e3e8-680d-4dcd-a7a8-facfbdfa8734%40www.visa.com.sg%3A8443%3Fencryption%3Dnone%26security%3Dtls%26type%3Dws%26host%3Dnet.oldfish233.xyz%26sni%3Dnet.oldfish233.xyz%26fp%3Drandom%26path%3D%252F%253Fed%253D2560%23net.oldfish233.xyz&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"  
+
 
 ipv6: true
 allow-lan: true
@@ -115,6 +116,8 @@ proxy-groups:
   - {name: 国内, <<: *prd}
   - {name: 其他, <<: *pr}
 
+
+
 #分隔,下面是地区分组
   - {name: 香港, type: select , include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 台湾, type: select , include-all-providers: true, filter: "(?i)台|tw|taiwan"}
@@ -132,14 +135,16 @@ proxy-groups:
     type: fallback
     use:
     - ytoo
-    filter: "(?i)(日用 专线)"
+    - 花云
+    filter: "(?i)(日用 专线|实验性)"
     
   - name: "低倍率专线负载均衡"
     type: load-balance
     strategy: round-robin
     use:
     - ytoo
-    filter: "(?i)(日用 专线)"
+    - 花云
+    filter: "(?i)(日用 专线|实验性)"
 
   - name: "EDtunnel负载均衡"
     type: load-balance
@@ -148,8 +153,7 @@ proxy-groups:
     - EDtunnel
     
 rules:
-  - GEOIP,lan,直连,no-resolve
-
+#自己编写
   - RULE-SET,PikPakDownload_domain,PikPakDownload
   - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,UtraMobile_classical,UtraMobile
@@ -160,27 +164,28 @@ rules:
   - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,iwara_classical,iwara
   - RULE-SET,jsdelivr_domain,jsdelivr
-  
-  - RULE-SET,biliintl_domain,哔哩东南亚
-  - RULE-SET,ehentai_domain,ehentai
-  - RULE-SET,github_domain,Github
-  - RULE-SET,twitter_domain,Twitter
-  - RULE-SET,youtube_domain,YouTube
-  - RULE-SET,google_domain,Google
-  - RULE-SET,telegram_domain,Telegram
-  - RULE-SET,netflix_domain,NETFLIX
-  - RULE-SET,bilibili_domain,哔哩哔哩
-  - RULE-SET,bahamut_domain,巴哈姆特
-  - RULE-SET,spotify_domain,Spotify
-  - RULE-SET,pixiv_domain,Pixiv
-  - RULE-SET,cn_domain,国内
-  - RULE-SET,geolocation-!cn,其他
 
-  - RULE-SET,google_ip,Google
-  - RULE-SET,netflix_ip,NETFLIX
-  - RULE-SET,telegram_ip,Telegram
-  - RULE-SET,twitter_ip,Twitter
-  - RULE-SET,cn_ip,国内
+  - GEOIP,lan,直连,no-resolve
+  - GEOSITE,biliintl,哔哩东南亚
+  - GEOSITE,ehentai,ehentai
+  - GEOSITE,github,Github
+  - GEOSITE,twitter,Twitter
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,google,Google
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,netflix,NETFLIX
+  - GEOSITE,bilibili,哔哩哔哩
+  - GEOSITE,bahamut,巴哈姆特
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,pixiv,Pixiv
+  - GEOSITE,CN,国内
+  - GEOSITE,geolocation-!cn,其他
+
+  - GEOIP,google,Google
+  - GEOIP,netflix,NETFLIX
+  - GEOIP,telegram,Telegram
+  - GEOIP,twitter,Twitter
+  - GEOIP,CN,国内
   - MATCH,其他
 
 rule-anchor:
@@ -188,74 +193,12 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: yaml}
   classical: &classical {type: http, interval: 86400, behavior: classical, format: yaml}
 rule-providers:
-  private:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml"
-  cn_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml"
-  biliintl_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/biliintl.yaml"
-  ehentai_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ehentai.yaml"
-  github_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml"
-  twitter_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.yaml"
-  youtube_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml"
-  google_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml"
-  telegram_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml"
-  netflix_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml"
-  bilibili_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bilibili.yaml"
-  bahamut_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bahamut.yaml"
-  spotify_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.yaml"
-  pixiv_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pixiv.yaml"
-  geolocation-!cn:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"
   PikPakDownload_domain:
     <<: *domain
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPakDownload.yaml"
   jsdelivr_domain:
     <<: *domain
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/jsdelivr.yaml"
-
-  cn_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml"
-  google_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.yaml"
-  netflix_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.yaml"
-  twitter_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.yaml"
-  telegram_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml"
-  
   Cloudflare_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Cloudflare.yaml"
