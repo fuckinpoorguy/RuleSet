@@ -14,13 +14,17 @@ proxy-providers:
     <<: *p
     url: "https://api.stentvessel.top/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=true&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D62943%26token%3Dp2VdT6V1BGpn%26sip002%3D1"     
   
-  直连节点:
+  小保罗VPS:
     <<: *p
     url: "https://apiurl.v1.mk/sub?target=clash&url=hysteria2%3A%2F%2Fc6fc9d33%40107.175.93.187%3A35436%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23%E5%B0%8F%E4%BF%9D%E7%BD%97&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
 
   花云:
     <<: *p
     url: "https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Fsid%3D117578%26token%3DnjV0wNcJ3GTG%26sip002%3D1"
+
+  nanoport:
+    <<: *p
+    url: "https://nano.nachoneko.cn/api/v1/client/subscribe?token=42287af5d183ab91168bc033e78604e0"
 
   EDtunnel:
     <<: *p
@@ -158,6 +162,19 @@ proxy-groups:
     strategy: round-robin
     use:
     - EDtunnel
+
+   - name: "直连节点"
+    type: select
+    use:
+    - 小保罗VPS
+    - nanoport
+
+   - name: "直连节点负载均衡"
+    type: load-balance
+    strategy: round-robin
+    use:
+    - 小保罗VPS
+    - nanoport
     
 rules:
 #自己编写
