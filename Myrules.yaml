@@ -36,6 +36,12 @@ external-controller: 127.0.0.1:9090
 external-ui: ui
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
+geodata-mode: true
+geox-url:
+  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+
 find-process-mode: strict
 global-client-fingerprint: chrome
 
@@ -97,7 +103,6 @@ proxy-groups:
   - {name: Pixiv, <<: *pr}
   - {name: ehentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
-  - {name: 哔哩东南亚, <<: *pr}
   - {name: 巴哈姆特, <<: *pr}
   - {name: YouTube, <<: *pr}
   - {name: NETFLIX, <<: *pr}
@@ -166,7 +171,6 @@ rules:
   - RULE-SET,jsdelivr_domain,jsdelivr
 
   - GEOIP,lan,直连,no-resolve
-  - GEOSITE,biliintl,哔哩东南亚
   - GEOSITE,ehentai,ehentai
   - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
