@@ -140,8 +140,6 @@ proxy-groups:
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
  # - {name: 低倍率专线, type: fallback , include-all-providers: true, filter: "(?i)(日用 专线)"}
  # - {name: 低倍率专线负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(日用 专线)"}
-  - {name: 直连节点, type: select , include-all-providers: true, filter: "(?i)(小保罗)"}
-  - {name: 直连节点负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(小保罗)"}
   - name: "低倍率专线"
     type: fallback
     use:
