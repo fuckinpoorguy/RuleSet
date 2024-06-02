@@ -119,10 +119,12 @@ proxy-groups:
   - {name: Cloudflare, <<: *pr}
   - {name: iwara, type: select , include-all-providers: true}
   - {name: parsec, <<: *pr}
+  - {name: Steam, <<: *prd}
+  - {name: Blizzard, <<: *prd}
+  - {name: Epic, <<: *prd}
+  - {name: Xbox, <<: *prd}
   - {name: 国内, <<: *prd}
   - {name: 其他, <<: *pr}
-
-
 
 #分隔,下面是地区分组
   - {name: 香港, type: select , include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
