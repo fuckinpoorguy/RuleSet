@@ -103,6 +103,7 @@ proxy-groups:
   - {name: Pixiv, <<: *pr}
   - {name: ehentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
+  - {name: 哔哩东南亚, <<: *pr}
   - {name: 巴哈姆特, <<: *pr}
   - {name: YouTube, <<: *pr}
   - {name: NETFLIX, <<: *pr}
@@ -169,8 +170,20 @@ rules:
   - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,iwara_classical,iwara
   - RULE-SET,jsdelivr_domain,jsdelivr
-
+#
   - GEOIP,lan,直连,no-resolve
+  - GEOSITE,category-ads-all,REJECT
+#自定义添加GEODAT
+  - GEOSITE,epicgames@cn,国内
+  - GEOSITE,epicgames,Epic
+  - GEOSITE,blizzard,Blizzard
+  - GEOSITE,steam@cn,国内
+  - GEOSITE,steam,Steam
+  - GEOSITE,xbox@cn,国内
+  - GEOSITE,xbox,Xbox
+  
+#自带
+  - GEOSITE,biliintl,哔哩东南亚
   - GEOSITE,ehentai,ehentai
   - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
