@@ -103,7 +103,6 @@ proxy-groups:
   - {name: Pixiv, <<: *pr}
   - {name: ehentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
-  - {name: 哔哩东南亚, <<: *pr}
   - {name: 巴哈姆特, <<: *pr}
   - {name: YouTube, <<: *pr}
   - {name: NETFLIX, <<: *pr}
@@ -185,7 +184,6 @@ rules:
   - GEOSITE,xbox,Xbox
   
 #自带
-  - GEOSITE,biliintl,哔哩东南亚
   - GEOSITE,ehentai,ehentai
   - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
