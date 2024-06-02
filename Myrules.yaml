@@ -138,8 +138,6 @@ proxy-groups:
   - {name: 其它地区, type: select , include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
   - {name: 全部节点, type: select , include-all-providers: true}
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
- # - {name: 低倍率专线, type: fallback , include-all-providers: true, filter: "(?i)(日用 专线)"}
- # - {name: 低倍率专线负载均衡, type: load-balance ,strategy: round-robin , include-all-providers: true, filter: "(?i)(日用 专线)"}
   - name: "低倍率专线"
     type: fallback
     use:
@@ -161,13 +159,13 @@ proxy-groups:
     use:
     - EDtunnel
 
-   - name: "直连节点"
+  - name: "直连节点"
     type: select
     use:
     - 小保罗VPS
     - nanoport
 
-   - name: "直连节点负载均衡"
+  - name: "直连节点负载均衡"
     type: load-balance
     strategy: round-robin
     use:
