@@ -181,7 +181,6 @@ rules:
   - RULE-SET,Plex_classical,Plex
   - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,iwara_classical,iwara
-  - RULE-SET,jsdelivr_domain,jsdelivr
 #
   - GEOIP,lan,直连,no-resolve
   - GEOSITE,category-ads-all,REJECT
