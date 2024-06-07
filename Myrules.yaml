@@ -112,7 +112,6 @@ proxy-groups:
   - {name: NETFLIX, <<: *pr}
   - {name: Spotify, <<: *pr}
   - {name: Github, <<: *pr}
-  - {name: jsdelivr, <<: *pr}
   - {name: PikPak, <<: *pr}
   - {name: PikPakDownload, <<: *prd}
   - {name: UtraMobile, type: select , include-all-providers: true}
@@ -225,9 +224,6 @@ rule-providers:
   PikPakDownload_domain:
     <<: *domain
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPakDownload.yaml"
-  jsdelivr_domain:
-    <<: *domain
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/jsdelivr.yaml"
   Cloudflare_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/Cloudflare.yaml"
