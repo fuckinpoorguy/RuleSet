@@ -115,7 +115,6 @@ proxy-groups:
   - {name: PikPak, <<: *pr}
   - {name: PikPakDownload, <<: *prd}
   - {name: UtraMobile, type: select , include-all-providers: true}
-  - {name: MusicTunnel, <<: *pr}
   - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
   - {name: Cloudflare, <<: *pr}
@@ -177,7 +176,6 @@ rules:
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
   - RULE-SET,Plex_classical,Plex
-  - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,iwara_classical,iwara
 #
   - GEOIP,lan,直连,no-resolve
@@ -226,9 +224,6 @@ rule-providers:
   CloudflareWarp_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/CloudflareWarp.yaml"
-  MusicTunnel_classical:
-    <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/MusicTunnel.yaml"
   PikPak_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/PikPak.yaml"
