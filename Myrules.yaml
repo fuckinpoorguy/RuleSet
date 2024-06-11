@@ -120,7 +120,6 @@ proxy-groups:
   - {name: CloudflareWarp, <<: *prd}
   - {name: Cloudflare, <<: *pr}
   - {name: iwara, type: select , include-all-providers: true}
-  - {name: parsec, <<: *pr}
   - {name: Steam, <<: *prd}
   - {name: Blizzard, <<: *prd}
   - {name: Epic, <<: *prd}
@@ -177,7 +176,6 @@ rules:
   - RULE-SET,UtraMobile_classical,UtraMobile
   - RULE-SET,Cloudflare_classical,Cloudflare
   - RULE-SET,CloudflareWarp_classical,CloudflareWarp
-  - RULE-SET,parsec_classical,parsec
   - RULE-SET,Plex_classical,Plex
   - RULE-SET,MusicTunnel_classical,MusicTunnel
   - RULE-SET,iwara_classical,iwara
@@ -240,9 +238,6 @@ rule-providers:
   iwara_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/iwara.yaml"
-  parsec_classical:
-    <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/parsec.yaml"
   UtraMobile_classical:
     <<: *classical
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/UtraMobile.yaml"   
