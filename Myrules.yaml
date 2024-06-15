@@ -184,6 +184,7 @@ rules:
   - GEOSITE,epicgames@cn,国内
   - GEOSITE,epicgames,Epic
   - GEOSITE,blizzard,Blizzard
+  - GEOSITE,steam@cn,国内
   - GEOSITE,steam,Steam
   - GEOSITE,xbox@cn,国内
   - GEOSITE,xbox,Xbox
