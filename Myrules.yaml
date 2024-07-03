@@ -168,6 +168,7 @@ proxy-groups:
     use:
     - 小保罗VPS
     - nanoport
+    - EDtunnel
 rules:
 #自己编写
   - RULE-SET,PikPakDownload_domain,PikPakDownload
