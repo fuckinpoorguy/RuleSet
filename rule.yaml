@@ -88,8 +88,6 @@ proxy-groups:
   - {name: Google, <<: *pr}
   - {name: Telegram, <<: *pr}
   - {name: Twitter, <<: *pr}
-  - {name: Pixiv, <<: *pr}
-  - {name: ehentai, type: select , include-all-providers: true}
   - {name: 哔哩哔哩, <<: *prd}
   - {name: 巴哈姆特, <<: *pr}
   - {name: YouTube, <<: *pr}
@@ -136,16 +134,12 @@ rules:
   - GEOSITE,xbox,Xbox
   
 #自带
-  - GEOSITE,ehentai,ehentai
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
   - GEOSITE,telegram,Telegram
-  - GEOSITE,netflix,NETFLIX
   - GEOSITE,bilibili,哔哩哔哩
   - GEOSITE,bahamut,巴哈姆特
-  - GEOSITE,spotify,Spotify
-  - GEOSITE,pixiv,Pixiv
   - GEOSITE,CN,国内
   - GEOSITE,geolocation-!cn,其他
 
