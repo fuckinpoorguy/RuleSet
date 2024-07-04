@@ -137,7 +137,6 @@ rules:
   
 #自带
   - GEOSITE,ehentai,ehentai
-  - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
