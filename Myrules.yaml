@@ -20,7 +20,7 @@ proxy-providers:
 
   花云:
     <<: *p
-    url: "https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Fsid%3D117578%26token%3DnjV0wNcJ3GTG%26sip002%3D1"
+    url: "https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Fsid%3D132198%26token%3Dj4ak48z188gt%26sip002%3D1"
 
   nanoport:
     <<: *p
