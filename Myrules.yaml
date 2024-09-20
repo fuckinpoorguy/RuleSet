@@ -24,7 +24,7 @@ proxy-providers:
 
   nanoport:
     <<: *p
-    url: "https://nano.nachoneko.cn/api/v1/client/subscribe?token=42287af5d183ab91168bc033e78604e0"
+    url: "https://nano.nachoneko.cn/api/v1/client/subscribe?token=8e9d231879376f78229cd4b0305193fa"
 
   EDtunnel:
     <<: *p
