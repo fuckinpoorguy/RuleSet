@@ -107,6 +107,7 @@ proxy-groups:
   - {name: PikPak, <<: *pr}
   - {name: PikPakDownload, <<: *prd}
   - {name: Apple, type: select , include-all-providers: true}
+  - {name: Chatgpt, type: select , include-all-providers: true}
   - {name: UtraMobile, type: select , include-all-providers: true}
   - {name: Plex, <<: *pr}
   - {name: CloudflareWarp, <<: *prd}
@@ -157,6 +158,7 @@ rules:
 #自己编写
   - RULE-SET,PikPakDownload_domain,PikPakDownload
   - RULE-SET,Apple_domain,Apple
+  - RULE-SET,Chatgpt_classical,Chatgpt
   - RULE-SET,PikPak_classical,PikPak
   - RULE-SET,UtraMobile_classical,UtraMobile
   - RULE-SET,Cloudflare_classical,Cloudflare
@@ -226,3 +228,6 @@ rule-providers:
   Apple_domain:
     <<: *domain
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/refs/heads/main/Apple.yaml"
+  Chatgpt_classical:
+    <<: *classical
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/UtraMobile.yaml"
