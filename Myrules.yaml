@@ -230,4 +230,4 @@ rule-providers:
     url: "https://github.com/fuckinpoorguy/RuleSet/raw/refs/heads/main/Apple.yaml"
   Chatgpt_classical:
     <<: *classical
-    url: "https://github.com/fuckinpoorguy/RuleSet/raw/main/UtraMobile.yaml"
+    url: "https://github.com/fuckinpoorguy/RuleSet/raw/refs/heads/main/Chatgpt.yaml"
