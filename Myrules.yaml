@@ -12,7 +12,7 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers: 
   小保罗VPS:
     <<: *p
-    url: "https://apiurl.v1.mk/sub?target=clash&url=hysteria2%3A%2F%2Fc6fc9d33%40107.175.93.187%3A35436%2F%3Finsecure%3D1%26sni%3Dwww.bing.com%23%E5%B0%8F%E4%BF%9D%E7%BD%97&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
+    url: "https://url.v1.mk/sub?target=clash&url=vmess%3A%2F%2FewogICJ2IjogIjIiLAogICJwcyI6ICJ2bWVzcyt3c3xsdVdsLmxvdmVAeHJheS5jb20iLAogICJhZGQiOiAiMTA3LjE3NS45My4xODciLAogICJwb3J0IjogMzQxOTcsCiAgImlkIjogIjRhOWMxNjlmLTNhYTQtNDhkMi05OWY2LWMyOGIyY2JiOGExOSIsCiAgImFpZCI6IDAsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAiIiwKICAicGF0aCI6ICIvNGE5YzE2OWYiLAogICJ0bHMiOiAibm9uZSIKfQ%3D%3D&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
 
   花云:
     <<: *p
